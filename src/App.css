@@ -1,0 +1,231 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter+Tight:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    --red: #FF0A0A;
+    --white: #FFFFFF;
+    --orange: #FF4343;
+}
+
+body{
+    font-family: "Open Sans", serif;
+}
+
+/* navbar components */
+.navbar{
+    display: flex;
+    flex-direction: column;
+    background-color: rgba(0, 0, 0, 0.795);
+    height: 200px;
+    width: 1440px;
+    align-items: center;
+    justify-content: space-around
+}
+
+.nav-top{
+    display: flex;
+    height: 40px;
+    width: 1200px;
+    align-items: center;
+    justify-content: space-between;
+    /* background-color: red; */
+
+}
+
+.nav-top input{
+    width: 285px;
+    height: 40px;
+    background: transparent;
+    border: 1px solid var(--red);
+    border-radius: 5px;
+    padding: 10px 10px;
+    color: white;
+
+}
+
+
+.nav-bottom{
+    display: flex;
+    flex-direction: row;
+    gap: 14px;
+
+}
+
+/* Button component */
+Button{
+    background-color: var(--orange);
+   color: white;
+    padding: 6px 12px;
+    border: none;
+    box-sizing: border-box;
+    border-radius: 5px;
+    font-size: 12px;
+}
+
+/* Hero section component */
+.hero-section{
+    width: 1440px;
+    height: calc(100vh - 200px);
+    background: url('../images/hero-background.png') no-repeat center center/cover;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+   padding-top: 40px;
+
+}
+
+.hero-section-row{
+    display: flex;
+    height: 167px;
+    width: 1060px;
+    gap: 20px;  
+
+
+}
+
+/* Cards section */
+.card{
+    width: 340px;
+    height: 180px;
+    background-color: white;
+    border-radius: 15px;
+    border: none;
+     box-shadow: 0 15px 25px rgba(129, 124, 124, 0.2);
+    backdrop-filter: blur(3px);
+    background-color: rgba(255, 255, 255, 0.2);
+    display: flex;
+    flex-direction: column;  
+    padding: 5px;
+   
+   
+}
+
+.card-top{
+    width: 330px;
+    height: 140px;
+    display: flex;
+    justify-content: space-evenly;
+    /* background-color: red; */
+}
+
+.card-top-right{
+    height: 140px;
+    width: 150px;
+    /* background-color: green; */
+}
+
+.card-top-left{
+    height: 140px;
+    width: 170px;
+    /* background-color: green; */
+    display: flex;
+    flex-direction: column;
+    /* align-items: center; */
+   gap: 8px;
+}
+
+.card-top-left h2{
+    font-size: 16px;
+    font-weight: 700;
+    color: white;
+}
+
+.card-top-left p{
+    font-size: 12px;
+    color: white;
+}
+.card-bottom{
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    padding-top: 5px;
+}
+
+/* Responsive  CSS */
+@media (max-width: 768px) { /* Adjust breakpoint as needed */
+
+    body{
+        overflow: hidden;
+    }
+
+    .navbar {
+        height: auto; /* Allow navbar to adjust height */
+        width: 100%; /* Full width */
+        gap: 10px;
+        padding: 40px;
+    }
+
+    .nav-top {
+        flex-direction: column; /* Stack nav items */
+        height: auto; /* Adjust height */
+        width: 100%;
+        gap: 15px;
+    }
+
+    .nav-top input {
+        width: 100%; /* Full width input */
+        margin-bottom: 10px; /* Add some spacing */
+    }
+
+    .nav-bottom {
+        flex-direction: row; /* Stack buttons */
+        width: 100%;
+        gap: 10px;
+    }
+
+    button{
+        font-size: 16px;
+    }
+
+    .hero-section{
+        width: 100%;
+        height: 100vh;
+        padding-top: 30px;
+        padding-bottom: 10px;
+        overflow-y: auto;
+        overflow-x: hidden;
+        gap: 20px;
+    }
+
+    .hero-section-row{
+        height: auto;
+        flex-direction: column;
+        align-items: center;
+        /* overflow: scroll; */
+        /* background-color: red; */
+    }
+
+    .card{
+        height: 210px;
+        width: 360px;
+    }
+
+    .card-top{
+        height: 210px;
+        width: 360px;        
+    }
+
+    .card-top-right{
+        width: 160px;
+    }
+
+    .card-top-left{
+        width: 200px;
+    }
+
+    .card-top-left h2{
+        font-size: 20px;
+        font-weight: 400;
+    }
+
+    .card-top-left p{
+        font-size: 16px;
+    }
+   
+}
